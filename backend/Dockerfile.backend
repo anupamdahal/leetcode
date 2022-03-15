@@ -1,0 +1,15 @@
+FROM node:12
+
+ENV DIR=backend
+
+WORKDIR /leetcode
+
+COPY $DIR/package*.json .
+
+RUN npm install
+
+COPY ${DIR}/. .
+
+COPY .env .
+
+CMD ["npm", "start"]
