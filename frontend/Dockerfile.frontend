@@ -4,11 +4,11 @@ ENV DIR=frontend
 
 WORKDIR /leetcode
 
-COPY $DIR/package*.json .
+COPY $DIR/package*.json ./
 
 RUN npm install
 
-COPY ${DIR}/. .
+COPY ${DIR}/. ./
 
 COPY .env .
 
