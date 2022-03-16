@@ -4,7 +4,13 @@ import '../styles/Problem.css'
 import Button from './Button';
 import {headerActions} from "../store/index";
 
-const Description = () =>{
+//import {Description, Discussion, Solution, Submission} from './tabHeader'; -> was not allowed
+import Description from "./tabHeader/Description";
+import Discussion from "./tabHeader/Discussion";
+import Solution from "./tabHeader/Solution";
+import Submission from "./tabHeader/Submission";
+
+const TabHeaderTop = () =>{
 
     const {description, solution, discussion, submission} = useSelector((state) => state.header);
 
@@ -27,13 +33,13 @@ const Description = () =>{
                 <Button click={clickHandler} name="Submission"/>
             </div>
             <div className="info_container">
-                {description && <h1>This is description</h1>}
-                {solution && <h1>This is solution</h1>}
-                {discussion && <h1>This is discussion</h1>}
-                {submission && <h1>This is submission</h1>}
+                {description && <Description />}
+                {solution && <Solution />}
+                {discussion && <Discussion />}
+                {submission && <Submission />}
             </div>
         </div>
     )
 }
 
-export default Description;
+export default TabHeaderTop;

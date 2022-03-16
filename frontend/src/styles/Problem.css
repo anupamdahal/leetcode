@@ -29,9 +29,12 @@
 }
 
 .buttons{
-    padding: 1em;
+    padding: .8em;
     color:white;
     /* border: 1px solid grey; */
     margin-top: 0.1em;
     width:25%;
+}
+h1{
+    color: white;
 }

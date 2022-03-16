@@ -7,7 +7,7 @@ const Button = (props) =>{
     }
 
     return(
-        <button onClick ={clickHandler} className="buttons">{props.name}</button>
+        <button onClick ={clickHandler} className="buttons">{<h3>{props.name}</h3>}</button>
     )
 }
 

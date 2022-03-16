@@ -1,12 +1,12 @@
 import "../styles/Problem.css"
-import Description from "./Description";
+import TabHeaderTop from "./TabHeaderTop.js";
 import Editor from "./Editor";
 
 const Problem = ()=>{
 
     return(
         <div className="container">
-            <Description />
+            <TabHeaderTop />
             <Editor />
         </div>
     )
