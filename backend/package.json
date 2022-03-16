@@ -5,15 +5,19 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build-proto && nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-proto": "sh build-proto.sh || grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./src --grpc_out=./src --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin -I ../ ../protos/*.proto"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/google-protobuf": "^3.15.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "grpc": "^1.24.11",
+    "grpc-tools": "^1.11.2",
     "nodemon": "^2.0.15"
   }
 }
