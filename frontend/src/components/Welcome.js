@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./utils/Button";
 import  {Route, Link} from 'react-router-dom';
 
 const Welcome = () =>{

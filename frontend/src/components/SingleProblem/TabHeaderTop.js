@@ -1,8 +1,8 @@
 import react from "react";
 import { useSelector, useDispatch } from "react-redux";
-import '../styles/Problem.css'
-import Button from './Button';
-import {headerActions} from "../store/index";
+import "../../styles/Problem.css"
+import Button from '../utils/Button';
+import {headerActions} from "../..//store/index";
 
 //import {Description, Discussion, Solution, Submission} from './tabHeader'; -> was not allowed
 import Description from "./tabHeader/Description";

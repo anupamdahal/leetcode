@@ -1,5 +1,6 @@
-import '../styles/Problem.css'
-import Button from './Button'
+// import '../styles/Problem.css'
+import "../..//styles/Problem.css"
+import Button from '../utils/Button'
 
 import React from "react";
 import { render } from "react-dom";

@@ -1,8 +1,10 @@
 import './App.css';
 import {Route} from 'react-router-dom';
-import Problem from './components/Problem';
+// import Problem from './components/Problem';
 import Problems from './components/Problems';
 import Welcome from './components/Welcome';
+import Problem from './components/SingleProblem/Problem';
+
 
 function App() {
   return (

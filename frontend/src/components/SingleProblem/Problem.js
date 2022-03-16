@@ -1,4 +1,5 @@
-import "../styles/Problem.css"
+// import "../styles/Problem.css"
+import "../../styles/Problem.css"
 import TabHeaderTop from "./TabHeaderTop.js";
 import Editor from "./Editor";
 
