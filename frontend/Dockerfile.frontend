@@ -10,6 +10,8 @@ RUN npm install
 
 COPY ${DIR}/. ./
 
-COPY .env .
+COPY .env ../
+
+EXPOSE $FRONTEND_PORT
 
 CMD ["npm", "start"]
