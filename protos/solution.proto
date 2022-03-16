@@ -1,0 +1,19 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+
+message submission {
+  string                  problemId   = 1;
+  string                  answer      = 2;
+  google.protobuf.Struct  case        = 3;
+}
+
+message result {
+  bool                    success     = 1;
+  int64                   noOfSuccess = 2;
+  int64                   noOfFailed  = 3;
+  string                  output      = 4;
+}
+
+service ProblemSolver{
+  rpc Solve (submission)  returns (result);
+}
