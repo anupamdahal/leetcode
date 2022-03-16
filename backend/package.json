@@ -5,9 +5,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm run build-proto && nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-proto": "sh build-proto.sh || grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./src --grpc_out=./src --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin -I ../ ../protos/*.proto"
+    "build-proto-sh": "sh build-proto.sh",
+    "build-proto": "yarn run grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./src --grpc_out=./src --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin -I ../ ../protos/*.proto"
   },
   "keywords": [],
   "author": "",
