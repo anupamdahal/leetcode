@@ -1,4 +1,8 @@
-*{
+/* *{
+    background-color: white;
+} */
+
+body{
     background-color: black;
 }
 
@@ -29,9 +33,26 @@
 }
 
 .buttons{
-    padding: 1em;
+    padding: .5em;
     color:white;
+    background-color: black;
     /* border: 1px solid grey; */
     margin-top: 0.1em;
-    width:25%;
+    width:50%;
+}
+.editor{
+    background-color: black;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    height:90%;
+    /* border: 5px solid red; */
+}
+.buttons_editor{
+    width:100%;
+    height:10%;
+    /* border: 1px solid blue; */
+}
+h1{
+    color: white;
 }
