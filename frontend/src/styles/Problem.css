@@ -1,0 +1,37 @@
+*{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height:calc(100vh - 10px);
+}
+
+.problem{
+    color: white;
+    border: 1px solid white;
+    width:50%;
+    height:100%;
+}
+
+.button_container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* margin: .5em; */
+    width:100%;
+    color:white;
+}
+
+.buttons{
+    padding: 1em;
+    color:white;
+    /* border: 1px solid grey; */
+    margin-top: 0.1em;
+    width:25%;
+}
