@@ -26,17 +26,19 @@ const TabHeaderTop = () =>{
 
     return(
         <div className="problem">
-            <div className="button_container">
-                <Button click={clickHandler} name="Description" />
-                <Button click={clickHandler} name="Solution"/>
-                <Button click={clickHandler} name="Discussion"/>
-                <Button click={clickHandler} name="Submission"/>
-            </div>
-            <div className="info_container">
-                {description && <Description />}
-                {solution && <Solution />}
-                {discussion && <Discussion />}
-                {submission && <Submission />}
+            <div className="problem_info">
+                <div className="button_container">
+                    <Button click={clickHandler} name="Description" />
+                    <Button click={clickHandler} name="Solution"/>
+                    <Button click={clickHandler} name="Discussion"/>
+                    <Button click={clickHandler} name="Submission"/>
+                </div>
+                <div className="info_container">
+                    {description && <Description />}
+                    {solution && <Solution />}
+                    {discussion && <Discussion />}
+                    {submission && <Submission />}
+                </div>
             </div>
         </div>
     )
