@@ -30,6 +30,7 @@ body{
     /* margin: .5em; */
     width:100%;
     color:white;
+    border: 1px solid white;
 }
 
 .buttons{
@@ -40,19 +41,86 @@ body{
     margin-top: 0.1em;
     width:50%;
 }
+
 .editor{
     background-color: black;
     text-align: left;
     align-items: left;
     justify-content: left;
-    height:90%;
+    height:80%;
     /* border: 5px solid red; */
+}
+.pick_language_editor{
+    height:10%;
+    border: 1px solid white;
+}
+.language_div{
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding:1.2em;    
+}
+.language{
+    padding:.5em;
 }
 .buttons_editor{
     width:100%;
     height:10%;
+    border: 1px solid white;
+}
+.codeblock{
+    background-color: rgb(250, 251, 252);
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width:95%;
+    height:auto;
+    margin-right: 3em;
+    /* padding:.5em;
+    margin:2em; */
+}
+.description_container{
+    width:96.5%;
+    height:85vh;
     /* border: 1px solid blue; */
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left:1.5em;
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.info_container{
+    /* border: 5px solid yellow; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:86vh;
+    
+}
+.problem_info{
+    /* border: 5px solid red; */
+    height:99%;
+}
+.buttonfornext{
+    width:50%;
 }
 h1{
     color: white;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(10, 10, 10, 0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(190, 186, 186, 0.5); 
 }

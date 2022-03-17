@@ -6,7 +6,6 @@ import {
 } from "@reduxjs/toolkit";
 
 const initialState = {description:true, solution:false, discussion:false, submission:false};
-
 const headerSlice = createSlice({
     name:"header",
     initialState: initialState,
@@ -38,10 +37,24 @@ const headerSlice = createSlice({
     },
 });
 
+const language_initialState = {language:'JavaScript'}
+const languageSlice = createSlice({
+    name:"language",
+    initialState: language_initialState,
+    reducers:{
+        language(state,action){
+            state.language = action.payload;
+        },
+    },
+});
+
+
 const store = configureStore({
-    reducer:{header:headerSlice.reducer},
+    reducer:{header:headerSlice.reducer, language:languageSlice.reducer},
 });
 
 export const headerActions = headerSlice.actions;
+export const languageActions = languageSlice.actions;
+
 export default store;
 
