@@ -1,0 +1,29 @@
+FROM python:3.8.10-slim
+
+ENV user=coder
+
+RUN adduser --disabled-password --gecos '' $user
+
+ENV DIR=servers/python
+
+WORKDIR /home/${user}/leetcode/${DIR}
+
+RUN chmod a+w /home/${user}/leetcode/${DIR}
+
+USER ${user}
+
+COPY ${DIR}/requirements.txt ./
+
+RUN pip3 install -r requirements.txt
+
+ENV PROTOS_DIR=protos
+
+COPY ${PROTOS_DIR} ../../${PROTOS_DIR}/
+
+COPY ${DIR}/build-proto.sh .
+
+RUN sh build-proto.sh
+
+COPY ${DIR}/. ./
+
+CMD [ "python3", "src/main.py" ]

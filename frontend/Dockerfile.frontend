@@ -1,8 +1,8 @@
-FROM node:12
+FROM node:12-alpine
 
 ENV DIR=frontend
 
-WORKDIR /leetcode
+WORKDIR /leetcode/${DIR}
 
 COPY $DIR/package*.json ./
 

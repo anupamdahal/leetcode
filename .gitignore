@@ -1,3 +1,6 @@
+# Editor Settings
+.vscode
+
 # Logs
 logs
 *.log
@@ -103,5 +106,6 @@ dist
 # TernJS port file
 .tern-port
 
-# Duplicated protofiles
-backend/proto/*.protos
+# Python
+**/.venv/**
+**/__pycache__/**
