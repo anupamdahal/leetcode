@@ -14,8 +14,6 @@ COPY ${PROTOS_DIR} ../${PROTOS_DIR}/
 
 COPY ${DIR}/build-proto.sh .
 
-RUN ls && echo "\n" && ls ..
-
 RUN npm run build-proto-sh
 
 COPY ${DIR}/. ./
