@@ -1,6 +1,7 @@
-// import '../styles/Problem.css'
-import "../..//styles/Problem.css"
+import "../../styles/Problem.css"
 import Button from '../utils/Button'
+import Pick_language from "./pick-language";
+import { useSelector } from "react-redux";
 
 import React from "react";
 import { render } from "react-dom";
@@ -10,23 +11,34 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-python";
-
 import "ace-builds/src-noconflict/theme-terminal";
 
 const Editor = () =>{
 
-    const code = "hello world";
+    const language = useSelector((state) => state.language.language);
+    var code = "Pick a Language";
+
+    if(language === 'JavaScript'){
+        code = `console.log('hello World!!!')`;
+        console.log('it is js');
+    }else if(language === 'Java'){
+        code = `System.out.println("Hello World");`;
+    }else{
+        code = `print("Hello World")`;
+    }
+
     function onChange(newValue) {
         console.log("change", newValue);
     }
 
-
     return(
         <div className="problem">
+            <Pick_language/>
             <div className="editor">
                 <AceEditor
                 placeholder="Placeholder Text"
-                mode="javascript"
+                // mode="javascript"
+                mode={language.toLowerCase()}
                 theme="terminal"
                 name="blah2"
                 //onLoad={this.onLoad}
@@ -37,7 +49,7 @@ const Editor = () =>{
                 showPrintMargin={true}
                 showGutter={true}
                 highlightActiveLine={true}
-                value={`console.log('hello world')`}
+                value={code}
                 setOptions={{
                 enableBasicAutocompletion: true,
                 enableLiveAutocompletion: true,
