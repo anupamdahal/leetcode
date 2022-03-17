@@ -9,10 +9,19 @@ services:
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
 
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: frontend/Dockerfile.frontend
-  #   restart: always
-  #   ports:
-  #     - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile.frontend
+    restart: always
+    ports:
+      - "${FRONTEND_PORT}:3000"
+
+  python-server:
+    build:
+      context: .
+      dockerfile: servers/python/Dockerfile.python
+    restart: always
+    ports:
+      - "${PYTHON_SERVER_PORT}:${PYTHON_SERVER_PORT}"
+

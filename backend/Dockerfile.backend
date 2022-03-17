@@ -1,8 +1,6 @@
-FROM node:12
+FROM node:12-slim
 
 ENV DIR=backend
-
-ENV PROTOS_DIR=protos
 
 WORKDIR /leetcode/${DIR}
 
@@ -10,13 +8,19 @@ COPY $DIR/package*.json ./
 
 RUN npm install
 
-COPY ${DIR}/. ./
-
-COPY .env ../
+ENV PROTOS_DIR=protos
 
 COPY ${PROTOS_DIR} ../${PROTOS_DIR}/
 
-RUN npm run build-proto
+COPY ${DIR}/build-proto.sh .
+
+RUN ls && echo "\n" && ls ..
+
+RUN npm run build-proto-sh
+
+COPY ${DIR}/. ./
+
+COPY .env ../
 
 EXPOSE $BACKEND_PORT
 
