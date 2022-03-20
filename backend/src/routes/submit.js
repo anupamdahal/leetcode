@@ -1,4 +1,4 @@
-import { Router } from 'express'
+const {Router} = require('express')
 
 const submitRoute = Router()
 
@@ -6,4 +6,4 @@ submitRoute.post('/', async (req, res) => {
   //TODO: validate request
 })
 
-export {submitRoute}
+exports.submitRoute = submitRoute

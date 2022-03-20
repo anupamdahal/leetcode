@@ -1,7 +1,8 @@
 def solve(problemId, answer, testcase):
+  print("returning")
   return {
+    "noOfSuccess": 33,
     "success": True,
-    "noOfSuccess": 0,
-    "noOfFailed": 0,
-    "output": ""
+    "output": "da f d",
+    "noOfFailed": 22,
   }

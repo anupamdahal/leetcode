@@ -1,11 +1,22 @@
-import express from "express"
-import { PORT } from "./config.js"
-import { problemsRoute } from "./src/routes/problems.js"
-import { PROBLEMS, RUN, SUBMIT } from "./src/constants/enumRoutes.js"
+const express = require('express')
+const { PORT } = require("./config.js")
+const { problemsRoute } = require("./src/routes/problems.js")
+const { PROBLEMS, RUN, SUBMIT } = require("./src/constants/enumRoutes.js")
+const { getResult } = require("./src/grpc/getResult.js")
 
 const app = express()
 app.use(PROBLEMS, problemsRoute)
 // app.use(RUN, runRoute)
 // app.use(SUBMIT, submitRoute)
+
+getResult({
+  problemId: "2",
+  answer: "kljafl",
+  testcase: null
+}).then(res => {
+  console.log('reading')
+  console.log(res)
+})
+
 
 app.listen(PORT)

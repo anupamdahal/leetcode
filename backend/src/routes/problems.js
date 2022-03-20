@@ -1,6 +1,5 @@
-import {Router} from 'express'
-
-import {getProblems} from '../utils/data'
+const {Router} = require('express')
+const {getProblems} = require('../utils/data')
 
 const problemsRoute = Router()
 
@@ -14,6 +13,4 @@ problemsRoute.get('/', (req, res) => {
   res.send(problems)
 })
 
-export {
-  problemsRoute
-}
+exports.problemsRoute = problemsRoute

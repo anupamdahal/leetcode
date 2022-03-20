@@ -1,1 +1,1 @@
-export const DEFAULT = 'default'
+exports.DEFAULT = 'default'

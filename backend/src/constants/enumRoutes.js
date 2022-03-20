@@ -1,3 +1,3 @@
-export const RUN = '/run'
-export const SUBMIT = '/submit'
-export const PROBLEMS = '/problems'
+exports.RUN = '/run'
+exports.SUBMIT = '/submit'
+exports.PROBLEMS = '/problems'

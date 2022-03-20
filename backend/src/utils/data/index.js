@@ -1,5 +1,5 @@
-import * as problems from '../../../db/problems.json'
-import { DEFAULT } from '../../constants/constants'
+const problems = require('../../../db/problems.json')
+const { DEFAULT } = require('../../constants/constants')
 
-export const getProblem = id => problems[id]
-export const getProblems = () => problems[DEFAULT]
+exports.getProblem = id => problems[id]
+exports.getProblems = () => problems

@@ -1,7 +1,8 @@
-import { ProblemSolverClient } from '../protos/solution_pb'
-import { credentials } from 'grpc'
+const { ProblemSolverClient } = require('../protos/solution_grpc_pb')
+const { credentials } = require('grpc')
 
-export const client = url => new ProblemSolverClient(
+exports.client = url => new ProblemSolverClient(
+  // `localhost:50051`,
   url,
   credentials.createInsecure(),
 )

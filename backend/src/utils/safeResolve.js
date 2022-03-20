@@ -1,4 +1,4 @@
-export const safeResolve = async promise => {
+exports.safeResolve = async promise => {
   try {
     const res = await promise
     return [res, null]
